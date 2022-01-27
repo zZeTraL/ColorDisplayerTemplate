@@ -1,0 +1,7 @@
+let template = (function() {
+
+    return {
+
+    }
+
+})();

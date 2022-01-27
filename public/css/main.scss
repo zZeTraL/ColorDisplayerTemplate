@@ -1,0 +1,89 @@
+/*************************
+*       MAIN
+**************************/
+:root {
+  /* Main */
+  --main-background-color: #393545;
+  --header-background-color: #4C475C;
+
+  /* Buttons */
+  --button-background-color: white;
+
+  /* titles */
+  --h1-color: white;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  background-color: var(--main-background-color);
+  transition: all ease-in-out 500ms;
+}
+
+h1 {
+  padding: 0;
+  margin: 0;
+  color: var(--h1-color);
+  text-align: center;
+}
+
+/*************************
+*       HEADER / NAVBAR
+**************************/
+header {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  height: 100px;
+  background-color: var(--header-background-color);
+}
+
+.navbar__container {
+  width: 100%;
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding: 0 25px 0 25px;
+}
+
+/* dark__mode */
+.dark__mode {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50%;
+  width: 5%;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  i {
+    font-size: 25px;
+    color: white;
+  }
+
+  i:hover {
+    opacity: 0.7;
+  }
+
+}
+
+/*************************
+*       MAIN
+**************************/
+.main__container {
+  margin: 50px 0 50px 0;
+}
+
+
+/*************************
+*       FONTS
+**************************/
+@font-face {
+  font-family: 'BebasNeue-Regular';
+  src: url("../fonts/BebasNeue-Regular.ttf") format("truetype");
+}
