@@ -9,14 +9,11 @@ let darkMode = (function() {
 
         // Setters
         toggle(){
-            console.log(document.documentElement.style);
             if(darkModeActivated){
-                document.documentElement.style.setProperty("--main-background-color", "white");
-                document.documentElement.style.setProperty("--h1-color", "#FF6D33");
+                document.body.setAttribute("class", "light");
                 darkModeActivated = false;
             } else {
-                document.documentElement.style.setProperty("--main-background-color", "#393545");
-                document.documentElement.style.setProperty("--h1-color", "white");
+                document.body.setAttribute("class", "");
                 darkModeActivated = true;
             }
         },

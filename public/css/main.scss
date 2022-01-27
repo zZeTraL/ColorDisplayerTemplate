@@ -17,7 +17,6 @@
   --color-mikado-yellow: 255, 198, 10;
   --color-independance: 76, 71, 92;
   --color-orange-crayola: 255, 109, 51;
-
 }
 
 body {
@@ -27,37 +26,60 @@ body {
   overflow-x: hidden;
   background-color: var(--main-background-color);
   transition: all ease-in-out 500ms;
+
+  h1 {
+    padding: 0;
+    margin: 0;
+    color: var(--h1-color);
+    font-size: 2rem;
+    text-align: center;
+    letter-spacing: 5px;
+    font-family: "BebasNeue-Regular", sans-serif;
+
+    mark {
+      color: inherit;
+      position: relative;
+      background: linear-gradient(120deg, rgba(255, 109, 51, 0.75) 0%, rgba(255, 109, 51, 0.75) 100%) no-repeat 0 80%;
+      background-size: 99% 10px;
+    }
+  }
+
+  h2 {
+    margin: 25px;
+    padding: 0;
+    color: var(--h2-color);
+    font-size: 2rem;
+    letter-spacing: 2.5px;
+    font-family: "Open Sans", sans-serif;
+  }
+
+}
+
+body.light {
+  background-color: white;
+  transition: all ease-in-out 500ms;
+
+  h1, h2 {
+    color: #393545;
+    mark {
+      background: linear-gradient(120deg, rgba(255, 198, 10, 0.75) 0%, rgba(255, 198, 10, 0.75) 100%) no-repeat 0 80%;
+      background-size: 99% 10px;
+    }
+  }
+
+  tbody {
+    background-color: #393545;
+  }
+
+  th {
+    color: white;
+  }
+
 }
 
 main {
   width: 100%;
   margin: auto;
-}
-
-h1 {
-  padding: 0;
-  margin: 0;
-  color: var(--h1-color);
-  font-size: 2rem;
-  text-align: center;
-  letter-spacing: 5px;
-  font-family: "BebasNeue-Regular", sans-serif;
-
-  mark {
-    color: inherit;
-    position: relative;
-    background: linear-gradient(120deg, rgb(255, 109, 51, 0.5) 0%, rgb(255, 109, 51, 0.5) 100%) no-repeat 0 80%;
-    background-size: 99% 10px;
-  }
-}
-
-h2 {
-  margin: 0 25px 0 25px;
-  padding: 0;
-  color: var(--h2-color);
-  font-size: 2rem;
-  letter-spacing: 2.5px;
-  font-family: "BebasNeue-Regular", sans-serif;
 }
 
 /*************************
@@ -119,7 +141,7 @@ header {
 **************************/
 .section__container {
   width: 80%;
-  margin: auto;
+  margin: 50px auto 50px auto;
 }
 
 /*************************
@@ -135,7 +157,7 @@ header {
   margin: 25px 0 25px 0;
 
   thead {
-    background-color: rgba(var(--color-mikado-yellow), 0.55) ;
+    background-color: rgba(var(--color-mikado-yellow), 0.6) ;
     height: 50px;
     font-size: 1.25rem;
     font-family: "Open Sans", sans-serif;
@@ -153,6 +175,7 @@ header {
     font-family: "Open Sans", sans-serif;
     letter-spacing: 1.5px;
     color: var(--main-background-color);
+    transition: all ease-in-out 500ms;
 
     th {
       width: 50%;
@@ -161,7 +184,18 @@ header {
     td {
       display: flex;
       justify-content: center;
+      align-items: center;
     }
+  }
+
+}
+
+.btn__send {
+  background-color: white;
+  border-radius: 50%;
+
+  i {
+    font-size: 20px;
   }
 
 }
