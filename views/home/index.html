@@ -7,6 +7,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="../../public/css/main.css">
+    <link rel="stylesheet" href="../../public/css/puppertino/forms.css">
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <title>Color Display</title>
 </head>
@@ -17,10 +18,45 @@
         </nav>
     </header>
     <main class="main__container">
-        <h1>Color Display Template</h1>
-        <div class="color__container">
-
-        </div>
+        <section class="section__container">
+            <h1><mark>Color Display Template</mark></h1>
+            <article class="setting__container">
+                <h2>Setting</h2>
+                <table class="table__container">
+                    <thead>
+                        <tr>
+                            <th>Property</th>
+                            <th>Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>--main-background-color</th>
+                            <td>
+                                <label><input type="text" class="p-form-text-alt p-form-no-validate" placeholder="Type your HEX code"></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>--header-background-color</th>
+                            <td>
+                                <label><input type="text" class="p-form-text-alt p-form-no-validate" placeholder="Type your HEX code"></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>--h1-color</th>
+                            <td>
+                                <label><input type="text" class="p-form-text-alt p-form-no-validate" placeholder="Type your value"></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>--h2-color</th>
+                            <td>
+                                <label><input type="text" class="p-form-text-alt p-form-no-validate" placeholder="Type your value"></label>
+                            </td>
+                        </tr>
+                    </tbody>
+            </article>
+        </section>
     </main>
 
     <script src="../../public/js/manager/ColorTemplateManager.js"></script>

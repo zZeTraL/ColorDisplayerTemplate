@@ -9,6 +9,11 @@
   --button-background-color: white;
   /* titles */
   --h1-color: white;
+  --h2-color: white;
+  /* colors */
+  --color-mikado-yellow: 255, 198, 10;
+  --color-independance: 76, 71, 92;
+  --color-orange-crayola: 255, 109, 51;
 }
 
 body {
@@ -20,11 +25,34 @@ body {
   transition: all ease-in-out 500ms;
 }
 
+main {
+  width: 100%;
+  margin: auto;
+}
+
 h1 {
   padding: 0;
   margin: 0;
   color: var(--h1-color);
+  font-size: 2rem;
   text-align: center;
+  letter-spacing: 5px;
+  font-family: "BebasNeue-Regular", sans-serif;
+}
+h1 mark {
+  color: inherit;
+  position: relative;
+  background: linear-gradient(120deg, rgba(255, 109, 51, 0.5) 0%, rgba(255, 109, 51, 0.5) 100%) no-repeat 0 80%;
+  background-size: 99% 10px;
+}
+
+h2 {
+  margin: 0 25px 0 25px;
+  padding: 0;
+  color: var(--h2-color);
+  font-size: 2rem;
+  letter-spacing: 2.5px;
+  font-family: "BebasNeue-Regular", sans-serif;
 }
 
 /*************************
@@ -71,6 +99,56 @@ header {
 **************************/
 .main__container {
   margin: 50px 0 50px 0;
+}
+
+.setting__container {
+  margin: 25px 0 25px 0;
+}
+
+/*************************
+*       SECTION
+**************************/
+.section__container {
+  width: 80%;
+  margin: auto;
+}
+
+/*************************
+*       TABLE
+**************************/
+.table__container {
+  border-collapse: collapse;
+  background: white;
+  border-radius: 5px;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  margin: 25px 0 25px 0;
+}
+.table__container thead {
+  background-color: rgba(var(--color-mikado-yellow), 0.55);
+  height: 50px;
+  font-size: 1.25rem;
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: 1.5px;
+  color: var(--main-background-color);
+}
+.table__container thead th {
+  width: 50%;
+}
+.table__container tbody {
+  height: 50px;
+  font-size: 1rem;
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: 1.5px;
+  color: var(--main-background-color);
+}
+.table__container tbody th {
+  width: 50%;
+}
+.table__container tbody td {
+  display: flex;
+  justify-content: center;
 }
 
 /*************************
