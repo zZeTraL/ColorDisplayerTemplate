@@ -1,0 +1,45 @@
+//======================================================
+//                     H E A D E R
+//
+//  This file contains all css property for the header
+//
+//======================================================
+header {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  height: 100px;
+  background-color: var(--dark-header-bg-color);
+  transition: all ease-in-out 500ms;
+
+  .navbar__container {
+    width: 100%;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 0 25px 0 25px;
+  }
+
+  /* dark__mode */
+  .dark__mode {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50%;
+    width: 5%;
+
+    &:hover {
+      cursor: pointer;
+    }
+    i {
+      font-size: 25px;
+      color: white;
+
+      &:hover {
+        opacity: 0.8;
+      }
+
+    }
+  }
+}

@@ -8,3 +8,4 @@ console.log(document.getElementsByTagName("input"))
 for (let elementsByTagNameElement of document.getElementsByTagName("input")) {
     elementsByTagNameElement.addEventListener("input", template.onTyping);
 }
+

@@ -1,23 +1,35 @@
-/*************************
-*       MAIN
-**************************/
+//======================================================
+//                     M A I N
+//
+//  This file contains some important css properties !
+//
+//======================================================
 :root {
-  /* Main */
-  --main-background-color: #393545;
-  --header-background-color: #4C475C;
+  /*          DARK MODE          */
+  --dark-main-bg-color: #393545;
+  --dark-header-bg-color: #4C475C;
 
-  /* Buttons */
-  --button-background-color: white;
+  // Title
+  --dark-hx-color: white;
 
-  /* titles */
-  --h1-color: white;
-  --h2-color: white;
-  --hx-color: white;
+  // Table
+  --dark-tbody-tr-bg-color: white;
 
-  /* table */
-  --tbody-tr-background-color: #4C475C;
 
-  /* colors */
+  /*          LIGHT MODE          */
+  --light-main-bg-color: white;
+  --light-header-bg-color: #4C475C;
+
+  // Title
+  --light-hx-color: #393545;
+
+  // Table
+  --light-tbody-tr-bg-color: #4C475C;
+
+
+
+
+  /* Others */
   --color-mikado-yellow: 255, 198, 10;
   --color-independance: 76, 71, 92;
   --color-orange-crayola: 255, 109, 51;
@@ -28,7 +40,7 @@ body {
   padding: 0;
   width: 100%;
   overflow-x: hidden;
-  background-color: var(--main-background-color);
+  background-color: var(--dark-main-bg-color);
   transition: all ease-in-out 500ms;
 
   h1, h2, h3, h4 {
@@ -43,7 +55,7 @@ body {
   .h1__title {
     padding: 0;
     margin: 0;
-    color: var(--h1-color);
+    color: var(--dark-hx-color);
     font-size: 3rem;
     text-align: center;
     letter-spacing: 5px;
@@ -53,7 +65,7 @@ body {
   .h2__title {
     margin: 25px;
     padding: 0;
-    color: var(--h2-color);
+    color: var(--dark-hx-color);
     font-size: 1.5rem;
     letter-spacing: 2.5px;
     font-family: "Open Sans", sans-serif;
@@ -62,183 +74,36 @@ body {
 }
 
 body.light {
-  background-color: white;
+  background-color: var(--light-main-bg-color);
   transition: all ease-in-out 500ms;
 
-  h1, h2, h3, h4 {
-    color: #393545;
-    mark {
-      background: linear-gradient(120deg, rgba(255, 198, 10, 0.75) 0%, rgba(255, 198, 10, 0.75) 100%) no-repeat 0 80%;
-      background-size: 99% 10px;
+  main {
+    h1, h2, h3, h4 {
+      color: var(--light-hx-color);
+      mark {
+        background: linear-gradient(120deg, rgba(255, 198, 10, 0.75) 0%, rgba(255, 198, 10, 0.75) 100%) no-repeat 0 80%;
+        background-size: 100% 8px;
+      }
     }
   }
 
+  #transition__footer {
+    fill: var(--light-main-bg-color);
+    transition: all ease-in-out 500ms;
+  }
+
   tbody {
-    background-color: var(--tbody-tr-background-color);
+    background-color: var(--light-tbody-tr-bg-color);
   }
 
   th {
     color: white;
   }
-
 }
 
 main {
   width: 100%;
   margin: auto;
-}
-
-/*************************
-*       HEADER / NAVBAR
-**************************/
-header {
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  height: 100px;
-  background-color: var(--header-background-color);
-}
-
-.navbar__container {
-  width: 100%;
-  height: inherit;
-  display: flex;
-  align-items: center;
-  justify-content: end;
-  padding: 0 25px 0 25px;
-}
-
-/* dark__mode */
-.dark__mode {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 50%;
-  width: 5%;
-
-  &:hover {
-    cursor: pointer;
-  }
-
-  i {
-    font-size: 25px;
-    color: white;
-  }
-
-  i:hover {
-    opacity: 0.7;
-  }
-
-}
-
-/*************************
-*       MAIN
-**************************/
-.main__container {
-  margin: 50px 0 50px 0;
-}
-
-.setting__container {
-  margin: 25px 0 25px 0;
-}
-
-/*************************
-*       SECTION
-**************************/
-.section__container {
-  width: 80%;
-  margin: 50px auto 50px auto;
-}
-
-/*************************
-*       TABLE
-**************************/
-.table__container {
-  border-collapse: collapse;
-  background: white;
-  border-radius: 5px;
-  overflow: hidden;
-  width: 100%;
-  position: relative;
-  margin: 25px 0 25px 0;
-
-  thead {
-    background-color: rgba(var(--color-mikado-yellow), 0.6) ;
-    height: 50px;
-    font-size: 1.25rem;
-    font-family: "Open Sans", sans-serif;
-    letter-spacing: 1.5px;
-    color: var(--main-background-color);
-
-    th {
-      width: 50%;
-    }
-  }
-
-  tbody {
-    height: 50px;
-    font-size: 1rem;
-    font-family: "Open Sans", sans-serif;
-    letter-spacing: 1.5px;
-    color: var(--main-background-color);
-    transition: all ease-in-out 500ms;
-
-    th {
-      width: 50%;
-    }
-
-    td {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-  }
-
-}
-
-.btn__send {
-  background-color: white;
-  border-radius: 50%;
-
-  i {
-    font-size: 20px;
-  }
-
-}
-
-/*************************
-*       SAMPLE
-**************************/
-.text__presentation {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-  font-family: "Open Sans", sans-serif;
-  color: white;
-  margin: 50px;
-
-  h1, h2, h3, h4 {
-    margin: 0;
-    padding: 0;
-  }
-
-  h1 {
-    font-size: 2.5rem;
-  }
-
-  h2 {
-    font-size: 2rem;
-  }
-
-  h3 {
-    font-size: 1.5rem;
-  }
-
-  h4 {
-    font-size: 1rem;
-  }
-
 }
 
 /*************************

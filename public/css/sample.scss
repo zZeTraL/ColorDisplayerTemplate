@@ -1,0 +1,109 @@
+//======================================================
+//                     S A M P L E
+//
+//  This file contains all css property for the main
+//  content e.g. sample of texts/buttons...
+//
+//======================================================
+
+/*          M A I N          */
+.main__container {
+  margin: 50px 0 50px 0;
+}
+
+/*          S E C T I O N          */
+.section__container {
+  width: 80%;
+  margin: 50px auto 50px auto;
+}
+
+/*          A R T I C L E          */
+.setting__container {
+  margin: 25px 0 25px 0;
+}
+
+/*          T A B L E          */
+.table__container {
+  border-collapse: collapse;
+  background: white;
+  border-radius: 5px;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  margin: 25px 0 25px 0;
+
+  thead {
+    background-color: rgba(var(--color-mikado-yellow), 0.6) ;
+    height: 50px;
+    font-size: 1.25rem;
+    font-family: "Open Sans", sans-serif;
+    letter-spacing: 1.5px;
+    color: var(--dark-main-bg-color);
+
+    th {
+      width: 50%;
+    }
+  }
+
+  tbody {
+    height: 50px;
+    font-size: 1rem;
+    font-family: "Open Sans", sans-serif;
+    letter-spacing: 1.5px;
+    color: var(--dark-main-bg-color);
+    transition: all ease-in-out 500ms;
+
+    th {
+      width: 50%;
+    }
+
+    td {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+}
+
+.btn__send {
+  background-color: white;
+  border-radius: 50%;
+
+  i {
+    font-size: 20px;
+  }
+}
+
+/*          S A M P L E          */
+.text__presentation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  font-family: "Open Sans", sans-serif;
+  color: white;
+  margin: 50px;
+
+  h1, h2, h3, h4 {
+    margin: 0;
+    padding: 0;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  h4 {
+    font-size: 1rem;
+  }
+
+}

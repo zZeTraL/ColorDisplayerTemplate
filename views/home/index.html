@@ -7,8 +7,14 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="../../public/css/main.css">
+    <link rel="stylesheet" href="../../public/css/header.css">
+    <link rel="stylesheet" href="../../public/css/sample.css">
+    <link rel="stylesheet" href="../../public/css/footer.css">
     <link rel="stylesheet" href="../../public/css/puppertino/forms.css">
+
+    <!-- LIBS -->
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
     <title>Color Display</title>
 </head>
 <body class="">
@@ -31,39 +37,39 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <th>--main-background-color</th>
+                            <th>--main-bg-color</th>
                             <td>
-                                <label><input id="main-background-color" type="text" class="p-form-text-alt p-form-no-validate" placeholder="Type your HEX code"></label>
+                                <label><input id="main-bg-color" type="text" class="p-form-text" maxlength="7" placeholder="Type your HEX code"></label>
                             </td>
                         </tr>
                         <tr>
-                            <th>--header-background-color</th>
+                            <th>--header-bg-color (footer)</th>
                             <td>
-                                <label><input type="text" class="p-form-text-alt p-form-no-validate" placeholder="Type your HEX code"></label>
+                                <label><input id="header-bg-color" type="text" class="p-form-text" maxlength="7" placeholder="Type your HEX code"></label>
                             </td>
                         </tr>
                         <tr>
-                            <th>--h1-color</th>
+                            <th>--hx-color</th>
                             <td>
-                                <label><input type="text" class="p-form-text-alt p-form-no-validate" placeholder="Type your value"></label>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>--h2-color</th>
-                            <td>
-                                <label><input type="text" class="p-form-text-alt p-form-no-validate" placeholder="Type your value"></label>
+                                <label><input type="text" class="p-form-text" maxlength="7" placeholder="Type your value"></label>
                             </td>
                         </tr>
                         <tr>
                             <th>--mark</th>
                             <td>
-                                <label><input type="text" class="p-form-text-alt p-form-no-validate" placeholder="Type your value"></label>
+                                <label><input type="text" class="p-form-text" maxlength="7" placeholder="Type your value"></label>
                             </td>
                         </tr>
                         <tr>
-                            <th>--button-background-color</th>
+                            <th>--button-primary-bg-color</th>
                             <td>
-                                <label><input type="text" class="p-form-text-alt p-form-no-validate" placeholder="Type your value"></label>
+                                <label><input type="text" class="p-form-text p-form-no-validate" maxlength="7" placeholder="Type your value"></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>--button-second-bg-color</th>
+                            <td>
+                                <label><input type="text" class="p-form-text" maxlength="7" placeholder="Type your value"></label>
                             </td>
                         </tr>
                     </tbody>
@@ -86,6 +92,13 @@
             </div>
         </section>
     </main>
+    <footer class="footer__container">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path id="transition__footer" fill="#393545" fill-opacity="1" d="M0,192L0,128L36.9,128L36.9,96L73.8,96L73.8,288L110.8,288L110.8,128L147.7,128L147.7,32L184.6,32L184.6,288L221.5,288L221.5,160L258.5,160L258.5,128L295.4,128L295.4,160L332.3,160L332.3,64L369.2,64L369.2,224L406.2,224L406.2,96L443.1,96L443.1,160L480,160L480,96L516.9,96L516.9,192L553.8,192L553.8,64L590.8,64L590.8,32L627.7,32L627.7,320L664.6,320L664.6,288L701.5,288L701.5,96L738.5,96L738.5,224L775.4,224L775.4,32L812.3,32L812.3,256L849.2,256L849.2,224L886.2,224L886.2,288L923.1,288L923.1,96L960,96L960,160L996.9,160L996.9,192L1033.8,192L1033.8,192L1070.8,192L1070.8,32L1107.7,32L1107.7,288L1144.6,288L1144.6,192L1181.5,192L1181.5,288L1218.5,288L1218.5,288L1255.4,288L1255.4,288L1292.3,288L1292.3,128L1329.2,128L1329.2,160L1366.2,160L1366.2,32L1403.1,32L1403.1,160L1440,160L1440,0L1403.1,0L1403.1,0L1366.2,0L1366.2,0L1329.2,0L1329.2,0L1292.3,0L1292.3,0L1255.4,0L1255.4,0L1218.5,0L1218.5,0L1181.5,0L1181.5,0L1144.6,0L1144.6,0L1107.7,0L1107.7,0L1070.8,0L1070.8,0L1033.8,0L1033.8,0L996.9,0L996.9,0L960,0L960,0L923.1,0L923.1,0L886.2,0L886.2,0L849.2,0L849.2,0L812.3,0L812.3,0L775.4,0L775.4,0L738.5,0L738.5,0L701.5,0L701.5,0L664.6,0L664.6,0L627.7,0L627.7,0L590.8,0L590.8,0L553.8,0L553.8,0L516.9,0L516.9,0L480,0L480,0L443.1,0L443.1,0L406.2,0L406.2,0L369.2,0L369.2,0L332.3,0L332.3,0L295.4,0L295.4,0L258.5,0L258.5,0L221.5,0L221.5,0L184.6,0L184.6,0L147.7,0L147.7,0L110.8,0L110.8,0L73.8,0L73.8,0L36.9,0L36.9,0L0,0L0,0Z"></path></svg>
+
+        <div class="footer_element">
+            <h1 class="h1__title"><mark>About this Project...</mark></h1>
+        </div>
+    </footer>
 
     <script src="../../public/js/manager/ColorTemplateManager.js"></script>
     <script src="../../public/js/manager/DarkModeManager.js"></script>
