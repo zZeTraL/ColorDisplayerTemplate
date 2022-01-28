@@ -12,6 +12,10 @@
   /* titles */
   --h1-color: white;
   --h2-color: white;
+  --hx-color: white;
+
+  /* table */
+  --tbody-tr-background-color: #4C475C;
 
   /* colors */
   --color-mikado-yellow: 255, 198, 10;
@@ -27,28 +31,30 @@ body {
   background-color: var(--main-background-color);
   transition: all ease-in-out 500ms;
 
-  h1 {
-    padding: 0;
-    margin: 0;
-    color: var(--h1-color);
-    font-size: 2rem;
-    text-align: center;
-    letter-spacing: 5px;
-    font-family: "BebasNeue-Regular", sans-serif;
-
+  h1, h2, h3, h4 {
     mark {
       color: inherit;
       position: relative;
-      background: linear-gradient(120deg, rgba(255, 109, 51, 0.75) 0%, rgba(255, 109, 51, 0.75) 100%) no-repeat 0 80%;
-      background-size: 99% 10px;
+      background: linear-gradient(120deg, rgba(255, 198, 10, 0.5) 0%, rgba(255, 198, 10, 0.5) 100%) no-repeat 0 80%;
+      background-size: 100% 8px;
     }
   }
 
-  h2 {
+  .h1__title {
+    padding: 0;
+    margin: 0;
+    color: var(--h1-color);
+    font-size: 3rem;
+    text-align: center;
+    letter-spacing: 5px;
+    font-family: "Open Sans", sans-serif;
+  }
+
+  .h2__title {
     margin: 25px;
     padding: 0;
     color: var(--h2-color);
-    font-size: 2rem;
+    font-size: 1.5rem;
     letter-spacing: 2.5px;
     font-family: "Open Sans", sans-serif;
   }
@@ -59,7 +65,7 @@ body.light {
   background-color: white;
   transition: all ease-in-out 500ms;
 
-  h1, h2 {
+  h1, h2, h3, h4 {
     color: #393545;
     mark {
       background: linear-gradient(120deg, rgba(255, 198, 10, 0.75) 0%, rgba(255, 198, 10, 0.75) 100%) no-repeat 0 80%;
@@ -68,7 +74,7 @@ body.light {
   }
 
   tbody {
-    background-color: #393545;
+    background-color: var(--tbody-tr-background-color);
   }
 
   th {
@@ -196,6 +202,41 @@ header {
 
   i {
     font-size: 20px;
+  }
+
+}
+
+/*************************
+*       SAMPLE
+**************************/
+.text__presentation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  font-family: "Open Sans", sans-serif;
+  color: white;
+  margin: 50px;
+
+  h1, h2, h3, h4 {
+    margin: 0;
+    padding: 0;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  h4 {
+    font-size: 1rem;
   }
 
 }

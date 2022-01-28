@@ -10,6 +10,9 @@
   /* titles */
   --h1-color: white;
   --h2-color: white;
+  --hx-color: white;
+  /* table */
+  --tbody-tr-background-color: #4C475C;
   /* colors */
   --color-mikado-yellow: 255, 198, 10;
   --color-independance: 76, 71, 92;
@@ -24,26 +27,26 @@ body {
   background-color: var(--main-background-color);
   transition: all ease-in-out 500ms;
 }
-body h1 {
+body h1 mark, body h2 mark, body h3 mark, body h4 mark {
+  color: inherit;
+  position: relative;
+  background: linear-gradient(120deg, rgba(255, 198, 10, 0.5) 0%, rgba(255, 198, 10, 0.5) 100%) no-repeat 0 80%;
+  background-size: 100% 8px;
+}
+body .h1__title {
   padding: 0;
   margin: 0;
   color: var(--h1-color);
-  font-size: 2rem;
+  font-size: 3rem;
   text-align: center;
   letter-spacing: 5px;
-  font-family: "BebasNeue-Regular", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
-body h1 mark {
-  color: inherit;
-  position: relative;
-  background: linear-gradient(120deg, rgba(255, 109, 51, 0.75) 0%, rgba(255, 109, 51, 0.75) 100%) no-repeat 0 80%;
-  background-size: 99% 10px;
-}
-body h2 {
+body .h2__title {
   margin: 25px;
   padding: 0;
   color: var(--h2-color);
-  font-size: 2rem;
+  font-size: 1.5rem;
   letter-spacing: 2.5px;
   font-family: "Open Sans", sans-serif;
 }
@@ -52,15 +55,15 @@ body.light {
   background-color: white;
   transition: all ease-in-out 500ms;
 }
-body.light h1, body.light h2 {
+body.light h1, body.light h2, body.light h3, body.light h4 {
   color: #393545;
 }
-body.light h1 mark, body.light h2 mark {
+body.light h1 mark, body.light h2 mark, body.light h3 mark, body.light h4 mark {
   background: linear-gradient(120deg, rgba(255, 198, 10, 0.75) 0%, rgba(255, 198, 10, 0.75) 100%) no-repeat 0 80%;
   background-size: 99% 10px;
 }
 body.light tbody {
-  background-color: #393545;
+  background-color: var(--tbody-tr-background-color);
 }
 body.light th {
   color: white;
@@ -175,6 +178,35 @@ header {
 }
 .btn__send i {
   font-size: 20px;
+}
+
+/*************************
+*       SAMPLE
+**************************/
+.text__presentation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  font-family: "Open Sans", sans-serif;
+  color: white;
+  margin: 50px;
+}
+.text__presentation h1, .text__presentation h2, .text__presentation h3, .text__presentation h4 {
+  margin: 0;
+  padding: 0;
+}
+.text__presentation h1 {
+  font-size: 2.5rem;
+}
+.text__presentation h2 {
+  font-size: 2rem;
+}
+.text__presentation h3 {
+  font-size: 1.5rem;
+}
+.text__presentation h4 {
+  font-size: 1rem;
 }
 
 /*************************

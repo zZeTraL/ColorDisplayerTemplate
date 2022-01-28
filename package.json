@@ -4,7 +4,7 @@
   "description": "A useful template to show your color selection",
   "main": "routes/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "zZeTraL",
   "license": "ISC",
