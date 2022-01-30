@@ -4,15 +4,35 @@ let template = (function() {
     let hexLength = 7;
 
     // Registering all root vars
-    let backgroundColorInput = document.getElementById("main-bg-color").value;
     let root = document.documentElement.style;
+
+    //
+    let validParameter = ["main-bg-color", "header-bg-color", "hx-color"]
 
     return {
         // Getters
+        /**
+         * Check si le name du color picker et l'id de l'input match (afin de set la variable)
+         *
+         * @param elementId
+         * @returns {number}
+         */
+        isIdMatching(elementId){
+            return validParameter.findIndex(element => {
+                if (element.includes(elementId)) {
+                    return true;
+                }
+            });
+        },
 
         // Setters
-        setValue(){
-
+        /**
+         * Reset tous les inputs
+         */
+        reset(){
+            for (let elementsByTagNameElement of document.getElementsByTagName("input")) {
+                elementsByTagNameElement.value = "";
+            }
         },
 
         // Methods
@@ -40,17 +60,27 @@ let template = (function() {
         onTyping(event){
             let element = event.target;
             let elementId = element.getAttribute("id");
-            let inputValue = element.value;
-            switch (elementId){
-                case "main-bg-color":
-                    template.setColorByHex(element, "--dark-main-bg-color", inputValue);
-                    break;
-                case "header-bg-color":
-                    template.setColorByHex(element, "--dark-header-bg-color", inputValue);
-                    break;
-                default:
-                    break;
+            let result = template.isIdMatching(elementId);
+            if(result !== -1){
+                console.log("--dark-" + validParameter[result])
+                template.setColorByHex(element, "--dark-" + validParameter[result], element.value);
             }
+        },
+
+        onColorSelected(event){
+            let element = event.target;
+            let inputValue = element.value;
+
+            // C'est l'input associé au color picket
+            let previousElement = element.parentElement.parentElement.childNodes[1].childNodes[0];
+
+            let result = template.isIdMatching(previousElement.getAttribute("id"));
+            if(result !== -1){
+                console.log("--dark-" + validParameter[result])
+                template.setColorByHex(element, "--dark-" + validParameter[result], inputValue);
+                previousElement.value = inputValue;
+            }
+
         }
 
     }

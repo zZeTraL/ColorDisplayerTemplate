@@ -17,7 +17,7 @@
 
     <title>Color Display</title>
 </head>
-<body class="">
+<body>
     <header class="header">
         <nav class="navbar__container">
             <div id="darkMode" class="dark__mode"><i class='bx bxs-moon'></i></div>
@@ -38,38 +38,44 @@
                     <tbody>
                         <tr>
                             <th>--main-bg-color</th>
-                            <td>
-                                <label><input id="main-bg-color" type="text" class="p-form-text" maxlength="7" placeholder="Type your HEX code"></label>
+                            <td id="test">
+                                <label><input id="main-bg-color" type="text" class="p-form-text" name="hex" maxlength="7" placeholder="Type your HEX code"></label>
+                                <label><input type="color" name="color" value="#e66465"></label>
                             </td>
                         </tr>
                         <tr>
                             <th>--header-bg-color (footer)</th>
                             <td>
-                                <label><input id="header-bg-color" type="text" class="p-form-text" maxlength="7" placeholder="Type your HEX code"></label>
+                                <label><input id="header-bg-color" type="text" class="p-form-text" name="hex" maxlength="7" placeholder="Type your HEX code"></label>
+                                <label><input type="color" name="color" value="#e66465"></label>
                             </td>
                         </tr>
                         <tr>
                             <th>--hx-color</th>
                             <td>
-                                <label><input type="text" class="p-form-text" maxlength="7" placeholder="Type your value"></label>
+                                <label><input id="hx-color" type="text" class="p-form-text" name="hex"  maxlength="7" placeholder="Type your HEX code"></label>
+                                <label><input type="color" name="color" value="#e66465"></label>
                             </td>
                         </tr>
                         <tr>
                             <th>--mark</th>
                             <td>
-                                <label><input type="text" class="p-form-text" maxlength="7" placeholder="Type your value"></label>
+                                <label><input type="text" class="p-form-text" name="hex" maxlength="7" placeholder="Type your HEX code"></label>
+                                <label><input type="color" name="color" value="#e66465"></label>
                             </td>
                         </tr>
                         <tr>
                             <th>--button-primary-bg-color</th>
                             <td>
-                                <label><input type="text" class="p-form-text p-form-no-validate" maxlength="7" placeholder="Type your value"></label>
+                                <label><input type="text" class="p-form-text p-form-no-validate" name="hex" maxlength="7" placeholder="Type your HEX code"></label>
+                                <label><input type="color" name="color" value="#e66465"></label>
                             </td>
                         </tr>
                         <tr>
                             <th>--button-second-bg-color</th>
                             <td>
-                                <label><input type="text" class="p-form-text" maxlength="7" placeholder="Type your value"></label>
+                                <label><input type="text" class="p-form-text" name="hex" maxlength="7" placeholder="Type your HEX code"></label>
+                                <label><input type="color" name="color" value="#e66465"></label>
                             </td>
                         </tr>
                     </tbody>

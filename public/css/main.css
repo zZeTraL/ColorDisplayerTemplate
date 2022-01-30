@@ -3,6 +3,7 @@
   --dark-main-bg-color: #393545;
   --dark-header-bg-color: #4C475C;
   --dark-hx-color: white;
+  --dark-p-color: wheat;
   --dark-tbody-tr-bg-color: white;
   /*          LIGHT MODE          */
   --light-main-bg-color: white;
@@ -21,6 +22,10 @@ body {
   width: 100%;
   overflow-x: hidden;
   background-color: var(--dark-main-bg-color);
+  transition: all ease-in-out 500ms;
+}
+body h1, body h2, body h3, body h4 {
+  color: var(--dark-hx-color);
   transition: all ease-in-out 500ms;
 }
 body h1 mark, body h2 mark, body h3 mark, body h4 mark {
@@ -53,6 +58,7 @@ body.light {
 }
 body.light main h1, body.light main h2, body.light main h3, body.light main h4 {
   color: var(--light-hx-color);
+  transition: all ease-in-out 500ms;
 }
 body.light main h1 mark, body.light main h2 mark, body.light main h3 mark, body.light main h4 mark {
   background: linear-gradient(120deg, rgba(255, 198, 10, 0.75) 0%, rgba(255, 198, 10, 0.75) 100%) no-repeat 0 80%;

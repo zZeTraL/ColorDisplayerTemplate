@@ -1,11 +1,15 @@
 window.onload = function() {
+
+    template.reset();
+
     let darkModeButton = document.getElementById("darkMode");
     darkModeButton.addEventListener('click', () => darkMode.onClick())
 }
 
-console.log(document.getElementsByTagName("input"))
+document.getElementsByName("hex").forEach(element => {
+    element.addEventListener("input", template.onTyping);
+})
 
-for (let elementsByTagNameElement of document.getElementsByTagName("input")) {
-    elementsByTagNameElement.addEventListener("input", template.onTyping);
-}
-
+document.getElementsByName("color").forEach(element => {
+    element.addEventListener("input", template.onColorSelected);
+})
