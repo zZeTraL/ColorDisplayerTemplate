@@ -30,7 +30,12 @@
   --light-tbody-tr-bg-color: #4C475C;
 
 
-
+  /* responsive */
+  --fs-xxl: 3rem;
+  --fs-xl:  2.5rem;
+  --fs-l: 2rem;
+  --fs-m: 1.5rem;
+  --fs-s: 1rem;
 
   /* Others */
   --color-mikado-yellow: 255, 198, 10;
@@ -61,7 +66,7 @@ body {
     padding: 0;
     margin: 0;
     color: var(--dark-hx-color);
-    font-size: 3rem;
+    font-size: var(--fs-xl);
     text-align: center;
     letter-spacing: 5px;
     font-family: "Open Sans", sans-serif;
@@ -71,7 +76,7 @@ body {
     margin: 25px;
     padding: 0;
     color: var(--dark-hx-color);
-    font-size: 1.5rem;
+    font-size: var(--fs-l);
     letter-spacing: 2.5px;
     font-family: "Open Sans", sans-serif;
   }
@@ -110,6 +115,30 @@ body.light {
 main {
   width: 100%;
   margin: auto;
+}
+
+@media (max-width: 40rem){
+  :root {
+    --fs-xxl: 2.25rem;
+    --fs-xl:  1.75rem;
+    --fs-l: 1.5rem;
+    --fs-m: 1.25rem;
+    --fs-s: 1rem;
+  }
+
+  .title__presentation {
+    flex-direction: column;
+
+    h1, h2, h3, h4 {
+      margin: 10px 0 10px 0;
+    }
+
+  }
+
+  tbody input[type=text] {
+    visibility: hidden;
+  }
+
 }
 
 /*************************

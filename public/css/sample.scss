@@ -76,34 +76,33 @@
 }
 
 /*          S A M P L E          */
-.text__presentation {
+.title__presentation {
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: space-around;
   font-family: "Open Sans", sans-serif;
   color: white;
   margin: 50px;
+  transition: all ease-in-out 500ms;
 
   h1, h2, h3, h4 {
-    margin: 0;
     padding: 0;
   }
 
   h1 {
-    font-size: 2.5rem;
+    font-size: var(--fs-xl);
   }
 
   h2 {
-    font-size: 2rem;
+    font-size: var(--fs-l);
   }
 
   h3 {
-    font-size: 1.5rem;
+    font-size: var(--fs-m);
   }
 
   h4 {
-    font-size: 1rem;
+    font-size: var(--fs-s);
   }
 
 }
