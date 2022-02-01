@@ -104,5 +104,16 @@
   h4 {
     font-size: var(--fs-s);
   }
+}
+
+.button__presentation {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  button {
+    margin: 0;
+    padding: 0;
+  }
 
 }

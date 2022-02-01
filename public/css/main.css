@@ -88,8 +88,8 @@ main {
 
 @media (max-width: 40rem) {
   :root {
-    --fs-xxl: 2.25rem;
-    --fs-xl: 1.75rem;
+    --fs-xxl: 2.5rem;
+    --fs-xl: 2rem;
     --fs-l: 1.5rem;
     --fs-m: 1.25rem;
     --fs-s: 1rem;
@@ -97,9 +97,10 @@ main {
 
   .title__presentation {
     flex-direction: column;
+    margin: 30px;
   }
   .title__presentation h1, .title__presentation h2, .title__presentation h3, .title__presentation h4 {
-    margin: 10px 0 10px 0;
+    margin: 5px 0 5px 0;
   }
 
   tbody input[type=text] {
